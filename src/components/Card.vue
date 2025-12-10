@@ -1,20 +1,17 @@
 <script setup>
 defineProps(["imagem"]);
 
-import { ref } from "vue";
+const like = ref(false);
 
-const liked = ref(false);
-
-function toggleLike() {
-  liked.value = !liked.value;
-}
 
 </script>
 
 <template>
   <div class="card">
-    <button @click="toggleLike" class="heart-btn">❤
-      <i class="fas fa-heart" :class="{ liked }"></i>
+    <button @click= "like = !like" class="heart-btn">
+     
+      {{ like ? "❤️" : "🤍"  }}
+  
     </button>
 
     <img :src="imagem" alt="Praia de São Conrado" />
@@ -43,18 +40,10 @@ function toggleLike() {
   border: none;
   cursor: pointer;
   font-size: 26px;
-  color: white;
   padding: 0;
-
-  &:hover {
-    color: #f049c2;
   }
-}
 
-/* Ícone */
-.liked {
-  color: #e43070 !important;
-}
+
 
 
 

@@ -24,7 +24,8 @@ import { Icon } from "@iconify/vue";
               height="24"
           /></a>
         </li>
-        <li><a href=""><Icon icon="material-symbols:sunny-outline-rounded" width="24" height="24" /></a></li>
+        <li><a href=""><Icon icon="material-symbols:sunny-outline-rounded" width="24" height="24"/>
+        </a></li>
         </ul>
     </nav>
   </header>
